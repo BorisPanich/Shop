@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 type CategoriesPropsType = {
     activeCategory?: number | null
     items: Array<string>
-    onClick: (name: string) => void
+    onClickItem: Function
 }
 
 export const Categories: React.FC<CategoriesPropsType> = (
     {
         items,
-        onClick
+        onClickItem
     }
 ) => {
 
