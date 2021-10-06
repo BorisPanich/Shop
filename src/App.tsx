@@ -1,8 +1,6 @@
-import React from 'react';
-import './App.css';
+import * as React from 'react';
 import { Route } from 'react-router-dom';
-import logo from './logo.svg';
-import { Categories } from './u3-components/Categories';
+import './App.css';
 import { Header } from './u4-features/Header';
 import { Cart } from './u5-pages/Cart';
 import { Home } from './u5-pages/Home';
