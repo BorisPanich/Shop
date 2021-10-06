@@ -1,8 +1,8 @@
 import React from 'react';
-import { Categories } from '../u3-components/Categories';
-import { SortPopup } from '../u3-components/SortPopup';
+import { Categories } from '../u3-components/Categories/Categories';
+import { SortPopup } from '../u3-components/SortPopup/SortPopup';
 
-export const Home = () => {
+export const Home: React.FC = (props) => {
 
     const items = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
     const filterItems = ['популярности', 'цене', 'алфавиту'];
@@ -10,11 +10,12 @@ export const Home = () => {
     return (
         <div className="container">
             <div className="content__top">
-                <Categories items={items}
-                    onClickItem={(name: any) => console.log(name)}      // !!!!!!!! ANY
+                <Categories
+                    items={items}
+                    onClick={(name: any) => console.log(name)}      // !!!!!!!! ANY
                 />
-                <SortPopup filterItems={filterItems}
-                    onClickFilter={(name: any) => console.log(name)}    // !!!!!!!! ANY
+                <SortPopup
+                   
                 />
             </div>
             <h2 className="content__title">Все пиццы</h2>

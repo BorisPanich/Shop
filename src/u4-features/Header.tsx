@@ -1,16 +1,23 @@
 import React from 'react';
+import logoSvg from '../../u1-assets/img/pizza-logo.svg';
 import { Link } from 'react-router-dom';
-import logoSvg from '../u1-assets/img/pizza-logo.svg';
+import { useSelector } from 'react-redux';
 import { Button } from '../u3-components/Button/Button';
+import { AppRootStateType } from '../utils/types';
 
 export const Header = () => {
+
+    const cartTotalPrice = useSelector<AppRootStateType, number>(totalPriceSelectors)
+    const cartItemsCount = useSelector<AppRootStateType, number>(itemsCountSelectors)
 
     return (
         <div className="header">
             <div className="container">
                 <Link to='/'>
                     <div className="header__logo">
-                        <img width="38" src={logoSvg} alt="Pizza logo" />
+                        <img width="38"
+                            src={logoSvg}
+                            alt="Pizza logo" />
                         <div>
                             <h1>React Pizza</h1>
                             <p>Вкуснейшая пицца</p>
@@ -20,7 +27,7 @@ export const Header = () => {
                 <div className="header__cart">
                     <Link to='/cart'>
                         <Button className={'button--cart'}>
-                            <span>15 BYN</span>
+                            <span>{cartTotalPrice} ₽</span>
                             <div className="button__delimiter"></div>
                             <svg
                                 width="18"
@@ -51,7 +58,7 @@ export const Header = () => {
                                     strokeLinejoin="round"
                                 />
                             </svg>
-                            <span>3</span>
+                            <span>{cartItemsCount}</span>
                         </Button>
                     </Link>
                 </div>
