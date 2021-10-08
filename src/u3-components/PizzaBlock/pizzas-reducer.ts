@@ -26,7 +26,7 @@ const fetchPizzasTC = createAsyncThunk('pizzas/fetchPizzas', async (filters: Fil
     try {
         const { data } = await axios.get(`/pizzas?${filters.category ? 'category=' + filters.category + '&' : ''}_sort=${filters.sortBy}&_order=desc`)
         return { items: data }
-    } catch (err) {
+    } catch (err: any) {
         thunkAPI.dispatch(isError(err))
         thunkAPI.rejectWithValue(err)
     }
