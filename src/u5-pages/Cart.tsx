@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux'
-import { map } from 'lodash'
-import { cartActions, CartItem } from '../u3-components/CartItem'
-import { Button } from '../u3-components/Button/Button'
-import { EmptyCart } from './EmptyCart'
-import { path } from '../u6-app/App';
+import { useDispatch, useSelector } from 'react-redux';
+import { map } from 'lodash';
+import { cartActions, CartItem } from '../u3-components/CartItem';
+import { Button } from '../u3-components/Button/Button';
+import { EmptyCart } from './EmptyCart';
 import { cartSelectors } from '../u3-components/CartItem';
 import { useActions } from '../utils/redux-utils';
+import { path } from '../App';
 
 export const Cart: React.FC = () => {
 
@@ -103,7 +103,7 @@ export const Cart: React.FC = () => {
                                         Всего пицц: <b>{itemsCount} шт.</b>
                                     </span>
                                     <span>
-                                        Сумма заказа: <b>{totalPrice} ₽</b>
+                                        Сумма заказа: <b>{totalPrice} BYN</b>
                                     </span>
                                 </div>
                                 <div className="cart__bottom-buttons">

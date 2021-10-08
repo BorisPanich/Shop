@@ -1,6 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { cartActions, cartSelectors } from '../u3-components/CartItem';
 import { Categories } from '../u3-components/Categories';
+import { pizzasActions, pizzaSelectors } from '../u3-components/PizzaBlock';
+import { objForCart, PizzaBlock } from '../u3-components/PizzaBlock/PizzaBlock';
+import { filtersActions, filterSelectors } from '../u3-components/SortPopup';
 import { FilterItemType, SortPopup } from '../u3-components/SortPopup/SortPopup';
 import { useActions } from '../utils/redux-utils';
 
@@ -24,7 +28,7 @@ export const Home: React.FC = (props) => {
         , [dispatch])
 
     const mappedPizza = pizzasItems && !pizzaIsLoading
-        ? pizzasItems.map((item) => <PizzaBlock key={item.id}
+        ? pizzasItems.map((item: any) => <PizzaBlock key={item.id}
             onAdd={addItemsToCart}
             cartItems={cartItems}
             isLoading={pizzaIsLoading}

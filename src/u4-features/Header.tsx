@@ -1,9 +1,10 @@
 import React from 'react';
-import logoSvg from '../../u1-assets/img/pizza-logo.svg';
+import logoSvg from '../u1-assets/img/pizza-logo.svg';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Button } from '../u3-components/Button/Button';
 import { AppRootStateType } from '../utils/types';
+import { itemsCountSelectors, totalPriceSelectors } from '../u3-components/CartItem/selectors';
 
 export const Header = () => {
 
