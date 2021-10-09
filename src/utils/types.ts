@@ -1,4 +1,4 @@
-import { rootReducer, store } from "../u6-store/store"
+import { rootReducer, store } from "../u6-store/store";
 
 export type RootReducerType = typeof rootReducer
 

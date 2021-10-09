@@ -1,8 +1,8 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { PizzaItemType } from '../PizzaBlock/pizzas-reducer';
-import { map, reduce } from 'lodash';
-import { objForCart } from '../PizzaBlock/PizzaBlock';
-import { AppRootStateType } from '../../utils/types';
+import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
+import {PizzaItemType} from '../PizzaBlock/pizzas-reducer'
+import {map, reduce} from 'lodash';
+import {objForCart} from '../PizzaBlock/PizzaBlock';
+import {AppRootStateType} from '../../utils/types';
 
 export type ItemArray = {
     [key: string]: Array<PizzaItemType>
@@ -18,9 +18,9 @@ const addToCartTC = createAsyncThunk('cart/addToCart', (pizzaItem: objForCart, t
     const pizzas = (thunkAPI.getState() as AppRootStateType).pizzas.items;
     const pizzaObj = pizzas && pizzas.find((obj: { id: number }) => obj.id === pizzaItem.id)
     if (pizzaObj) {
-        return { pizzaItem: pizzaObj }
+        return {pizzaItem: pizzaObj}
     } else {
-        return { pizzaItem: {} as PizzaItemType }
+        return {pizzaItem: {} as PizzaItemType}
     }
 })
 
@@ -72,17 +72,17 @@ export const slice = createSlice({
     },
     extraReducers: builder => {
         builder.addCase(addToCartTC.fulfilled, (state, action) => {
-            if (!state.items[action.payload.pizzaItem.id]) {
-                state.items[action.payload.pizzaItem.id] = []
-            }
-            state.items[action.payload.pizzaItem.id].push(action.payload.pizzaItem)
+                if (!state.items[action.payload.pizzaItem.id]) {
+                    state.items[action.payload.pizzaItem.id] = []
+                }
+                state.items[action.payload.pizzaItem.id].push(action.payload.pizzaItem)
 
-            const result = reduce(map(state.items), (prev, cur) => prev.concat(cur as never), []);
-            state.totalPrice = result.reduce((total: number, obj: PizzaItemType) => obj.price + total, 0);
-            state.itemsCount = result.length;
-        })
+                const result = reduce(map(state.items), (prev, cur) => prev.concat(cur as never), []);
+                state.totalPrice = result.reduce((total: number, obj: PizzaItemType) => obj.price + total, 0);
+                state.itemsCount = result.length;
+            })
     }
 })
 
 export const cartReducer = slice.reducer
-export const { plusItem, minusItem, removeItemsById, clearItems } = slice.actions
+export const {plusItem, minusItem, removeItemsById, clearItems} = slice.actions

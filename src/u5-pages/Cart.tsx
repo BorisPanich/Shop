@@ -2,12 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { map } from 'lodash';
-import { cartActions, CartItem } from '../u3-components/CartItem';
 import { Button } from '../u3-components/Button/Button';
 import { EmptyCart } from './EmptyCart';
-import { cartSelectors } from '../u3-components/CartItem';
 import { useActions } from '../utils/redux-utils';
 import { path } from '../App';
+import { cartActions, CartItem, cartSelectors } from '../u3-components/CartItem';
 
 export const Cart: React.FC = () => {
 
