@@ -41,7 +41,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yanr build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build -m 'Automatically update gh-pages [skip ci]'",
     "json-server": "json-server --watch public/db.json --port 3001",
     "dev": "concurrently \"npm start\" \"npm run json-server\""
