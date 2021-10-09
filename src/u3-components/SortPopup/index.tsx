@@ -1,6 +1,6 @@
-import * as filterSelectors from './selectors'
-import {slice as filtersSlice} from './filters-reducer';
-import {SortPopup} from './SortPopup'
+import * as filterSelectors from './selectors';
+import { slice as filtersSlice } from './filters-reducer';
+import { SortPopup } from './SortPopup';
 
 export {
     filterSelectors

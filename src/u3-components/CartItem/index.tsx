@@ -1,6 +1,6 @@
-import * as cartSelectors from './selectors'
-import {asyncActions as cartAsyncActions, slice as cartSlice} from './cart-reducer'
-import {CartItem} from './CartItem'
+import * as cartSelectors from './selectors';
+import { asyncActions as cartAsyncActions, slice as cartSlice } from './cart-reducer';
+import { CartItem } from './CartItem';
 
 export {
     cartSelectors

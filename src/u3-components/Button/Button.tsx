@@ -1,6 +1,6 @@
-import * as React from 'react'
-import classNames from 'classnames'
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react'
+import * as React from 'react';
+import classNames from 'classnames';
+import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
 type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 

@@ -7,9 +7,9 @@
    margin-bottom: 65px;
    padding: 16px;
    border-radius: 10px;
-   box-shadow: 0 4px 10px rgba(63,93,138,0.5);
+   box-shadow: 0 4px 10px rgba(63, 93, 138, 0.5);
    cursor: pointer;
-   transition: transform .15s linear,box-shadow .15s linear,-webkit-transform .15s linear,-webkit-box-shadow .15s linear;
+   transition: transform .15s linear, box-shadow .15s linear, -webkit-transform .15s linear, -webkit-box-shadow .15s linear;
 
    @media (max-width: 1090px) {
       margin-bottom: 35px;
@@ -85,6 +85,7 @@
       line-height: 27px;
       letter-spacing: 0.015em;
    }
+
    &:hover {
       transform: translateY(-3px)
    }

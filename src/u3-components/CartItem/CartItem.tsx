@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Button } from '../Button/Button'
+import * as React from 'react';
+import { Button } from '../Button/Button';
 
 export type CartItemProps = {
    imageUrl: string

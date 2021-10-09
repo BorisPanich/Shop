@@ -4,6 +4,7 @@
 .categories {
    ul {
       display: flex;
+
       @media screen and(max-width: 1000px) {
          flex-wrap: wrap;
          justify-content: center;
@@ -18,6 +19,7 @@
          cursor: pointer;
          transition: background-color 0.1s ease-in-out;
          @include noselect();
+
          @media screen and(max-width: 1000px) {
             margin-bottom: 10px;
          }

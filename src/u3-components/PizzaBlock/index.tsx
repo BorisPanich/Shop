@@ -1,6 +1,6 @@
-import * as pizzaSelectors from './selectors'
-import {asyncActions as pizzasAsyncActions, slice as pizzasSlice} from './pizzas-reducer';
-import {PizzaBlock} from './PizzaBlock'
+import * as pizzaSelectors from './selectors';
+import { asyncActions as pizzasAsyncActions, slice as pizzasSlice } from './pizzas-reducer';
+import { PizzaBlock } from './PizzaBlock';
 
 export {
     pizzaSelectors

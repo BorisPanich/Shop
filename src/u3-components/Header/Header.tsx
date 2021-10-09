@@ -1,8 +1,8 @@
-import * as React from 'react'
-import logoSvg from '../../u1-assets/img/pizza-logo.svg'
-import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { Button } from '../Button/Button'
+import * as React from 'react';
+import logoSvg from '../../u1-assets/img/pizza-logo.svg';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Button } from '../Button/Button';
 import { itemsCountSelectors, totalPriceSelectors } from '../CartItem/selectors';
 import { AppRootStateType } from '../../utils/types';
 
@@ -28,7 +28,7 @@ export const Header = () => {
             <div className="header__cart">
                <Link to='/cart'>
                   <Button className={'button--cart'}>
-                     <span>{cartTotalPrice} ₽</span>
+                     <span>{cartTotalPrice} BYN</span>
                      <div className="button__delimiter"></div>
                      <svg
                         width="18"

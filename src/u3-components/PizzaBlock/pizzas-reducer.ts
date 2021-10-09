@@ -1,5 +1,5 @@
-import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit'
-import {FiltersInitialState} from '../SortPopup/filters-reducer';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { FiltersInitialState } from '../SortPopup/filters-reducer';
 import axios from 'axios';
 
 export type PizzaItemType = {
@@ -24,8 +24,8 @@ const initialState = {
 const fetchPizzasTC = createAsyncThunk('pizzas/fetchPizzas', async (filters: FiltersInitialState, thunkAPI) => {
     thunkAPI.dispatch(isLoading())
     try {
-        const {data} = await axios.get(`/pizzas?${filters.category ? 'category=' + filters.category + '&' : ''}_sort=${filters.sortBy}&_order=desc`)
-        return {items: data}
+        const { data } = await axios.get(`/pizzas?${filters.category ? 'category=' + filters.category + '&' : ''}_sort=${filters.sortBy}&_order=desc`)
+        return { items: data }
     } catch (err: any) {
         thunkAPI.dispatch(isError(err))
         thunkAPI.rejectWithValue(err)
@@ -65,4 +65,4 @@ export const slice = createSlice({
 })
 
 export const pizzasReducer = slice.reducer
-export const {isLoaded, isLoading, isError} = slice.actions
+export const { isLoaded, isLoading, isError } = slice.actions

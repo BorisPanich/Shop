@@ -1,3 +1,3 @@
-import {AppRootStateType} from '../../utils/types';
+import { AppRootStateType } from '../../utils/types';
 
-export const filtersSelectors =(state: AppRootStateType) => state.filters
+export const filtersSelectors = (state: AppRootStateType) => state.filters
