@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route } from 'react-router-dom';
-import './App.css';
+import './u0-scss/app.scss';
 import { Header } from './u3-components/Header/Header';
 import { Cart } from './u5-pages/Cart';
 import { Home } from './u5-pages/Home';
@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="wrapper">
+      <div className="header">
         <Header />
         <div className="content">
           <Route exact path={path.HOME} render={() => <Home />} />
