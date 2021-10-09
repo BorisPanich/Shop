@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { PopupMenu } from '../PopupMenu/PopupMenu';
+import './Sort.scss';
 
 type SortPopupProps = {
    sortBy: string

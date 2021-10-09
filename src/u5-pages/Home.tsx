@@ -9,6 +9,7 @@ import { filtersActions, filterSelectors } from '../u3-components/SortPopup';
 import { objForCart } from '../u3-components/PizzaBlock/PizzaBlock';
 import { FilterItemType } from '../u3-components/SortPopup/SortPopup';
 import { useActions } from '../utils/redux-utils';
+import '../u0-scss/app.scss';  
 
 export const Home: React.FC = (props) => {
     const pizzasItems = useSelector(pizzaSelectors.pizzasItemsSelectors)

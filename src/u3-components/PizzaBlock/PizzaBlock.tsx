@@ -2,8 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { Button } from '../Button/Button';
 import { ItemArray } from '../CartItem/cart-reducer';
-
-import './PizzaBlock.scss'
+import './PizzaBlock.scss';
 
 export type ItemType = {
    id?: number

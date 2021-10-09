@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { Button } from '../Button/Button';
 import { itemsCountSelectors, totalPriceSelectors } from '../CartItem/selectors';
 import { AppRootStateType } from '../../utils/types';
+import './Header.scss';
 
 export const Header = () => {
 

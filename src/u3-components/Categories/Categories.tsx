@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Categories.scss';
 
 type CategoriesProps = {
    activeCategory: number | null
